@@ -22,56 +22,53 @@ $breakpoint--huge: 1800px
 // Colors
 // --------------------------------------------------
 
-$color-primary: #C11D3D
-$color-secondary: #8D50BC
-$color-info: #3D84D5
-$color-success: #22C65B
-$color-warning: #EABE00
-$color-danger: #EB696D
-$color-black: #24243F
+$color-primary: #FCC82B
+$color-secondary: #0F5E8C
+$color-info: #0F5E8C
+$color-success: #40C839
+$color-warning: #EC883C
+$color-danger: #EC3C7D
+$color-black: #030303
 $color-white: #FFFFFF
 
-$color-gray--lightest: mix($color-primary, mix($color-black, $color-white, 1%), 1%)
-$color-gray--lighter: mix($color-primary, mix($color-black, $color-white, 3%), 1%)
+$color-gray--lightest: mix($color-primary, mix($color-black, $color-white, 2%), 1%)
+$color-gray--lighter: mix($color-primary, mix($color-black, $color-white, 5%), 1%)
 $color-gray--light: mix($color-primary, mix($color-black, $color-white, 20%), 1%)
 $color-gray: mix($color-primary, mix($color-black, $color-white, 50%), 3%)
 $color-gray--dark: mix($color-primary, mix($color-black, $color-white, 70%), 3%)
 $color-gray--darker: mix($color-primary, mix($color-black, $color-white, 80%), 3%)
 $color-gray--darkest: mix($color-primary, mix($color-black, $color-white, 90%), 3%)
-$color-gray--gradient: linear-gradient(to right, mix($color-primary, mix($color-black, $color-white, 5%), 1%), mix($color-primary, mix($color-black, $color-white, 7%), 1%))
 
 //
 // Fonts
 // --------------------------------------------------
 
 $font-systems: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif
-$font-content: 'Open Sans', $font-systems
-$font-heading: 'Kanit', $font-systems
+$font-content: 'Raleway', $font-systems
+// $font-heading: 'Libre Baskerville', $font-systems
+$font-heading: 'Libre Baskerville', $font-systems
 
 //
 // Shadows
 // --------------------------------------------------
 
-// $shadow: 0 0 2rem mix($color-secondary, transparent, 50%)
-// $shadow--small: 0 0 1rem mix($color-secondary, transparent, 50%)
-$shadow--large: 0 0 20rem mix($color-black, transparent, 10%)
-$shadow-inner: inset 0 -.075rem .1rem mix($color-black, transparent, 20%)
+$shadow: 0 0 20rem mix($color-black, transparent, 10%), 0 1px 2px mix($color-black, transparent, 10%)
 
 //
 // Times
 // --------------------------------------------------
 
-$time: .6s
-$time--small: .2s
-$time--large: 1.2s
+$time: .4s
+$time--small: .1s
+$time--large: 1s
 
 //
 // Radius
 // --------------------------------------------------
 
-$radius: .4rem
-$radius--small: .2rem
-$radius--large: .7rem
+$radius: 1rem
+$radius--small: .5rem
+$radius--large: 1.75rem
 
 //
 // Background
@@ -83,40 +80,27 @@ $background-color: $color-white
 // Buttons
 // --------------------------------------------------
 
-$button-background: $color-gray
-$button-background--hover: mix($color-gray, $color-white, 90%)
-$button-background--active: mix($color-gray, $color-white, 85%)
-$button-background--disabled: $color-gray--light
-$button-border: none
-$button-border--hover: none
-$button-border--active: none
-$button-border--disabled: none
-$button-border-radius: 0
-$button-font-family: $font-heading
+$button-background: $color-primary
+$button-background--hover: mix($color-primary, $color-white, 90%)
+$button-background--active: mix($color-primary, $color-white, 85%)
+$button-border-radius: 100rem
+$button-font-family: $font-content
 $button-font-size: 1em
-$button-font-weight: 600
-$button-padding: .8em 2em
-$button-text-color: $color-white
-$button-text-color--hover: $color-white
-$button-text-color--active: $color-white
-$button-text-color--disabled: $color-white
-$button-text-transform: uppercase
+$button-font-weight: 700
+$button-padding: .7rem 2.5rem .9rem
+$button-text-color: $color-black
+$button-text-color--hover: $color-black
+$button-text-color--active: $color-black
+$button-text-transform: none
 
 //
-// Containers
-// --------------------------------------------------
-
-$container-max-width: 1200px
-$container-position: 'center'
-$container-vertical-padding: 5rem
-
-//
-// Contents
+// Content
 // --------------------------------------------------
 
 $content-color: $color-black
 $content-font-family: $font-content
-$content-font-weight: 400
+$content-font-weight: 300
+$content-font-weight--strong: 700
 $content-line-height: 1.5
 
 //
@@ -125,52 +109,40 @@ $content-line-height: 1.5
 
 $heading-color: $color-black
 $heading-font-family: $font-heading
-$heading-font-size: 1rem
-$heading-font-weight: 700
-$heading-line-height: 1.25
-$heading-text-transform: uppercase
-
-//
-// Horizontal rules
-// --------------------------------------------------
-
-// $hr-color: mix($color-gray, transparent, 25%)
-// $hr-height: 1px
+// $heading-font-size: 1rem
+// $heading-font-weight: 300
+// $heading-text-transform: uppercase
 
 //
 // Inputs
 // --------------------------------------------------
 
-$input-background: $color-gray--lightest
-$input-background--hover: $color-gray--lightest
-$input-background--focus: $color-gray--lightest
-$input-background--disabled: $color-gray--lighter
-$input-border: 1px solid $color-gray--light
-$input-border--hover: 1px solid mix($color-gray--light, $color-gray, 70%)
-$input-border--focus: 1px solid mix($color-gray--light, $color-primary, 70%)
-$input-border--disabled: 1px solid $color-gray--light
-$input-border-radius: $radius--small
+$input-background: mix($color-secondary, $color-white, 3%)
+$input-background--hover: mix($color-secondary, $color-white, 3%)
+$input-background--focus: mix($color-secondary, $color-white, 3%)
+$input-border: 1px solid mix($color-secondary, $color-white, 20%)
+$input-border--hover: 1px solid mix($color-secondary, $color-white, 40%)
+$input-border--focus: 1px solid mix($color-secondary, $color-white, 40%)
+$input-border-radius: $radius--large
 $input-font-family: $font-content
 $input-font-size: 1rem
 $input-font-weight: 400
-$input-padding: 1.2em 1em
+$input-padding: 1em 1.5em
 $input-placeholder-color: mix($color-gray--light, $color-gray, 30%)
 $input-select-arrow-color: $color-gray
 $input-select-arrow-color--hover: $color-gray--dark
 $input-select-arrow-color--focus: mix($color-gray, $color-primary, 50%)
-$input-select-arrow-color--disabled: $color-gray--light
 $input-text-color: $color-black
 $input-text-color--hover: $color-black
 $input-text-color--focus: $color-black
-$input-text-color--disabled: $color-gray
 
 //
 // Links
 // --------------------------------------------------
 
-$link-color: $color-primary
-$link-color--hover: mix($color-primary, $color-white, 80%)
-$link-color--active: mix($color-primary, $color-white, 70%)
+$link-color: $color-secondary
+$link-color--hover: mix($color-secondary, $color-white, 80%)
+$link-color--active: mix($color-secondary, $color-white, 70%)
 $link-text-decoration: none
 $link-text-decoration--hover: none
 $link-text-decoration--active: none
@@ -186,6 +158,6 @@ $invert-content-font-weight: 400
 $invert-heading-color: $invert-content-color
 $invert-heading-font-weight: 300
 $invert-hr-color: mix($color-gray--light, transparent, 25%)
-$invert-link-color: mix($color-white, $color-primary, 70%)
-$invert-link-color--hover: mix($color-white, $color-primary, 80%)
-$invert-link-color--active: mix($color-white, $color-primary, 90%)
+$invert-link-color: $color-white
+$invert-link-color--hover: mix($color-white, $color-black, 90%)
+$invert-link-color--active: mix($color-white, $color-black, 80%)

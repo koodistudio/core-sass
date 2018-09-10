@@ -1,14 +1,14 @@
 //
-// Chain
+// Stack
 // --------------------------------------------------
 // .my-element
-//   +chain(1rem)
+//   +stack(1rem)
 
-@mixin chain($gap: null)
+@mixin stack($gap: null)
   display: flex
   justify-content: flex-start
-  align-items: center
-  flex-direction: row
+  align-items: stretch
+  flex-direction: column
 
   > *
     flex-shrink: 1
@@ -16,9 +16,9 @@
 
   @if $gap != null
     > * + *
-      margin: 0 0 0 $gap
+      margin: $gap 0 0 0
 
-  > hr
+  hr
     flex-shrink: 99999
     flex-grow: 99999
     margin: 0

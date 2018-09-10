@@ -18,6 +18,7 @@
 
   @return $color
 
+
 //
 // Rem
 // --------------------------------------------------
@@ -66,6 +67,8 @@ body
   -moz-osx-font-smoothing: grayscale
   -webkit-font-smoothing: antialiased
 
+strong
+  font-weight: $content-font-weight--strong
 
 //
 // Headings
@@ -74,10 +77,12 @@ body
 +hx
   color: $heading-color
   font-family: $heading-font-family
-  font-size: $heading-font-size
-  font-weight: $heading-font-weight
-  line-height: $heading-line-height
-  text-transform: $heading-text-transform
+  font-size: 1rem
+  font-weight: 600
+  line-height: 1
+  // font-size: $heading-font-size
+  // font-weight: $heading-font-weight
+  // text-transform: $heading-text-transform
 
 
 //
@@ -86,8 +91,8 @@ body
 
 a
   color: $link-color
-  text-decoration: $link-text-decoration
   cursor: pointer
+  text-decoration: $link-text-decoration
 
   &:hover
     color: $link-color--hover
@@ -106,9 +111,8 @@ a
 button,
 input[type="button"],
 input[type="submit"],
-.button-core,
   background: $button-background
-  border: $button-border
+  border: none
   border-radius: $button-border-radius
   color: $button-text-color
   cursor: pointer
@@ -120,23 +124,20 @@ input[type="submit"],
   line-height: $content-line-height
   outline: 0
   padding: $button-padding
+  text-align: center
   text-transform: $button-text-transform
   -webkit-font-smoothing: inherit
 
   &:hover
     background: $button-background--hover
-    border: $button-border--hover
     color: $button-text-color--hover
 
   &:active
     background: $button-background--active
-    border: $button-border--active
     color: $button-text-color--active
 
   &[disabled]
-    background: $button-background--disabled
-    border: $button-border--disabled
-    color: $button-text-color--disabled
+    opacity: .5
     pointer-events: none
 
 
@@ -184,9 +185,8 @@ select,
     color: $input-text-color--focus
 
   &[disabled]
-    background: $input-background--disabled
-    border: $input-border--disabled
-    color: $input-text-color--disabled
+    opacity: .5
+    pointer-events: none
 
   &::placeholder
     color: $input-placeholder-color
@@ -201,7 +201,6 @@ select
 select,
 select:hover,
 select:focus,
-select[disabled],
   background-repeat: no-repeat
   background-position: right 12px center
   padding-right: 36px
@@ -215,12 +214,8 @@ select:hover
 select:focus
   background-image: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' version='1.1' width='12' height='14' fill='#{svg-safe-hex($input-select-arrow-color--focus)}' %3E %3Cpolygon points='0,6 6,0 12,6' /%3E %3Cpolygon points='0,8 12,8 6,14' /%3E %3C/svg%3E")
 
-select[disabled]
-  background-image: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' version='1.1' width='12' height='14' fill='#{svg-safe-hex($input-select-arrow-color--disabled)}' %3E %3Cpolygon points='0,6 6,0 12,6' /%3E %3Cpolygon points='0,8 12,8 6,14' /%3E %3C/svg%3E")
-  cursor: not-allowed
-
 input[type="checkbox"],
-input[type="radio"]
+input[type="radio"],
   margin-left: 5px
   margin-right: 5px
 
@@ -234,7 +229,7 @@ label
 
 *,
 *:before,
-*:after
+*:after,
   box-sizing: inherit
 
 
@@ -266,7 +261,7 @@ img,
 embed,
 object,
 audio,
-video
+video,
   height: auto
   max-width: 100%
 
@@ -301,8 +296,6 @@ th
 
 hr
   border: 0
-  // height: $hr-height
-  // background: $hr-color
 
 
 //
@@ -331,12 +324,12 @@ h2,
 h3,
 h4,
 h5,
-h6
+h6,
   margin: 0
   padding: 0
 
 button,
 input,
 select,
-textarea
+textarea,
   margin: 0

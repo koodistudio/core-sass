@@ -4,15 +4,10 @@
 // .my-element
 //   +container(['default', 'fluid', '300px'], 'left')
 
-@mixin container($width: 'default', $position: $container-position)
+@mixin container($width: 'large')
   $padding: $rem
-  padding-top: $container-vertical-padding
-  padding-bottom: $container-vertical-padding
 
   // Set width by name
-  @if $width == 'default'
-    $width: $container-max-width
-
   @if $width == 'small'
     $width: $breakpoint--small
 
@@ -68,13 +63,5 @@
       $horizontal-padding-when-wider-than-container: $breakpoint--huge * .05
 
     @media (min-width: #{$width + $horizontal-padding-when-wider-than-container * 2})
-
-      @if $position == 'center'
-        padding-left: calc((100% - #{$width}) / 2)
-        padding-right: calc((100% - #{$width}) / 2)
-
-      @if $position == 'left'
-        padding-right: calc(100% - #{$width} - #{$padding})
-
-      @if $position == 'right'
-        padding-left: calc(100% - #{$width} - #{$padding})
+      padding-left: calc((100% - #{$width}) / 2)
+      padding-right: calc((100% - #{$width}) / 2)
