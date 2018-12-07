@@ -22,7 +22,7 @@ $breakpoint--huge: 1800px
 // Colors
 // --------------------------------------------------
 
-$color-primary: #FCC82B
+$color-primary: #FF2800
 $color-secondary: #0F5E8C
 $color-info: #0F5E8C
 $color-success: #40C839
@@ -44,15 +44,14 @@ $color-gray--darkest: mix($color-primary, mix($color-black, $color-white, 90%), 
 // --------------------------------------------------
 
 $font-systems: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif
-$font-content: 'Raleway', $font-systems
-// $font-heading: 'Libre Baskerville', $font-systems
-$font-heading: 'Libre Baskerville', $font-systems
+$font-content: 'Montserrat', $font-systems
+$font-heading: 'Montserrat Alternates', $font-systems
 
 //
 // Shadows
 // --------------------------------------------------
 
-$shadow: 0 0 20rem mix($color-black, transparent, 10%), 0 1px 2px mix($color-black, transparent, 10%)
+$shadow: .5rem .5rem 5rem mix($color-black, transparent, 5%), 0 1px 1px mix($color-black, transparent, 10%)
 
 //
 // Times
@@ -81,16 +80,16 @@ $background-color: $color-white
 // --------------------------------------------------
 
 $button-background: $color-primary
-$button-background--hover: mix($color-primary, $color-white, 90%)
-$button-background--active: mix($color-primary, $color-white, 85%)
+$button-background--hover: mix($color-primary, $color-black, 95%)
+$button-background--active: mix($color-primary, $color-black, 90%)
 $button-border-radius: 100rem
 $button-font-family: $font-content
 $button-font-size: 1em
 $button-font-weight: 700
-$button-padding: .7rem 2.5rem .9rem
-$button-text-color: $color-black
-$button-text-color--hover: $color-black
-$button-text-color--active: $color-black
+$button-padding: .65rem 3.5rem
+$button-text-color: $color-white
+$button-text-color--hover: $color-white
+$button-text-color--active: $color-white
 $button-text-transform: none
 
 //
@@ -99,7 +98,7 @@ $button-text-transform: none
 
 $content-color: $color-black
 $content-font-family: $font-content
-$content-font-weight: 300
+$content-font-weight: 400
 $content-font-weight--strong: 700
 $content-line-height: 1.5
 
@@ -109,9 +108,6 @@ $content-line-height: 1.5
 
 $heading-color: $color-black
 $heading-font-family: $font-heading
-// $heading-font-size: 1rem
-// $heading-font-weight: 300
-// $heading-text-transform: uppercase
 
 //
 // Inputs
