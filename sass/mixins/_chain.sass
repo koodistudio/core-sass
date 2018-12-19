@@ -19,8 +19,11 @@
     flex-grow: 0
 
   @if $gap != null
-    > * + *
-      margin: 0 0 0 $gap
+    > *
+      margin: 0 $gap 0 0
+      
+      &:last-child
+        margin: 0
 
   > hr
     flex-shrink: 99999
