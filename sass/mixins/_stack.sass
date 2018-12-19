@@ -13,16 +13,18 @@
   justify-content: flex-start
   align-items: stretch
   flex-direction: column
+  flex-wrap: nowrap
 
   > *
     flex-shrink: 1
     flex-grow: 0
+    margin: 0
+    width: auto
 
   @if $gap != null
     > * + *
-      margin: $gap 0 0 0
+      margin-top: $gap
 
-  hr
+  > hr
     flex-shrink: 99999
     flex-grow: 99999
-    margin: 0
